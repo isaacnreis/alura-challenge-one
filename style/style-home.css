@@ -1,0 +1,218 @@
+/*Estilizações gerais*/
+body{
+    font-family: 'Inter', sans-serif;
+    /*background: #E5E5E5;*/
+    background: linear-gradient( 180deg, #FFFFFF, #E5E5E5, #E5E5E5, #0A3871);
+    font-size: 12px;
+    /*width: 100vw;*/
+    height: 90vh;
+    margin: 5vh 0 5vh 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header h1 {
+    float: left;
+    margin-left: 3.5vw;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.secao1 {
+    flex-basis: 65%;
+}
+
+.secao2 {
+    flex-basis: 30%;
+    height: 90vh;
+    background: #FFFFFF;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Estilizando área que o usuario irá digitar o texto*/
+.inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 4em;
+}
+
+form {
+    width: 100%;
+    max-width: 60vw;
+
+}
+
+div .input-texto {
+    width: 100%;
+    margin-bottom: 2em;
+    position: relative;
+
+}
+
+div .input-texto label {
+    font-size: 2.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #0A3871;
+    cursor: text;
+    transition: 0.5s ease-in-out;
+}
+
+div .input-texto .area-texto {
+    width: 100%;
+    height: 10vh;
+    resize: none;
+    border: none;
+    background: none;
+    font-size: 2.5em;
+    color: #0A3871;
+    outline: 0;
+    transition: 1s ease-in-out;
+}
+
+div .input-texto .area-texto:focus {
+    height: 60vh;
+}
+
+div .input-texto .area-texto:focus ~ label,
+div .input-texto .area-texto:valid ~ label {
+    transform: translateY(-5vh);
+    font-size: 2em;
+}
+
+.inputs p img {
+    margin-right: 0.5em;
+}
+
+.inputs p {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+/*Estilizando botões*/
+.botoes-interacao {
+    width: 100%;
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 1em;
+}
+
+.botao-crip {
+    background: #0A3871;
+    color: #FFFFFF;
+}
+
+.botao-descrip {
+    background: #D8DFE8;
+    color: #0A3871;
+}
+
+.botao-crip, .botao-descrip {
+    padding: 10px;
+    width: 22em;
+    height: 5em;
+    margin-right: 10%;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+/*estilização inicial da parte do resultado*/
+
+.sem-mensagem {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10%;
+    box-sizing: border-box;
+}
+
+.img-resultado {
+    width: 100%;
+}
+
+.texto-inicial-resultado {
+    margin: 5%;
+}
+
+.sem-mensagem h2 {
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-bottom: 10%;
+}
+
+.sem-mensagem p {
+    font-size: 1.2em;
+}
+
+.resultado {
+    text-align: center;
+    width: 30vw;
+}
+
+.area-resultado {
+    height: 65vh;
+    width: 100%;
+    resize: none;
+    border: none;
+    background: none;
+    font-size: 2.5em;
+    color: #495057;
+    outline: 0;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.botao-copiar {
+    padding: 5px;
+    width: 15em;
+    height: 5em;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.esconder2 {
+    height: 100%;
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/*Estilizando rodapé*/
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5vh;
+    text-align: center;
+    background: #0A3871;
+    height: 10vh;
+    font-size: 1.2em;
+    color: #D8DFE8;
+}
