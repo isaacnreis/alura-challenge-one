@@ -45,12 +45,8 @@ main {
     justify-content: flex-start;
     align-items: flex-end;
     margin-top: 4em;
-}
-
-form {
     width: 100%;
     max-width: 60vw;
-
 }
 
 div .input-texto {
@@ -71,7 +67,7 @@ div .input-texto label {
 }
 
 div .input-texto .area-texto {
-    width: 100%;
+    width: 50vw;
     height: 10vh;
     resize: none;
     border: none;
@@ -88,7 +84,7 @@ div .input-texto .area-texto:focus {
 
 div .input-texto .area-texto:focus ~ label,
 div .input-texto .area-texto:valid ~ label {
-    transform: translateY(-5vh);
+    transform: translateY(-5.5vh);
     font-size: 2em;
 }
 
@@ -97,8 +93,6 @@ div .input-texto .area-texto:valid ~ label {
 }
 
 .inputs p {
-    display: flex;
-    align-items: center;
     margin-left: 0;
 }
 
@@ -108,7 +102,7 @@ div .input-texto .area-texto:valid ~ label {
     height: 6em;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     margin-top: 1em;
 }
@@ -119,14 +113,14 @@ div .input-texto .area-texto:valid ~ label {
 }
 
 .botao-descrip {
-    background: #D8DFE8;
+    background: #FFFFFF;
     color: #0A3871;
 }
 
 .botao-crip, .botao-descrip {
-    padding: 10px;
-    width: 22em;
-    height: 5em;
+    padding: 2%;
+    width: 35%;
+    height: 90%;
     margin-right: 10%;
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -167,29 +161,34 @@ div .input-texto .area-texto:valid ~ label {
 
 .resultado {
     text-align: center;
-    width: 30vw;
+    width: 100%;
+    height: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .area-resultado {
-    height: 65vh;
+    height: 70vh;
     width: 100%;
     resize: none;
     border: none;
     background: none;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #495057;
     outline: 0;
-    padding: 1em;
+    padding: 0.5em 1em;
     box-sizing: border-box;
 }
 
 .botao-copiar {
-    padding: 5px;
-    width: 15em;
-    height: 5em;
+    padding: 1%;
+    width: 70%;
+    height: 8vh;
     border: 1px solid #0A3871;
     border-radius: 24px;
     cursor: pointer;
+    background: #FFFFFF;
+    color: #0A3871;
 }
 
 .esconder2 {
@@ -209,10 +208,156 @@ footer div {
     justify-content: center;
     align-items: center;
 
-    margin-top: 5vh;
+    margin: 5vh 0 0 0;
     text-align: center;
     background: #0A3871;
     height: 10vh;
     font-size: 1.2em;
     color: #D8DFE8;
+}
+
+@media  screen and (max-width: 800px) {
+    body {
+        font-size: 10px;
+        margin: 1vh 1vw;
+        width: 100vw;
+        height: 100%;
+    }
+
+    .principal {
+        width: 98vw;
+    }
+
+    .interacoes {
+        display: block;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    header h1 {
+        margin-left: 0.5em;
+        display: block;
+        float: none;
+    }
+
+    header h1 img {
+        width: 1.5em;
+        margin-left: 0;
+    }
+
+    .secao1 {
+        display: block;
+        margin-bottom: 5px;
+        margin-left: 4%;
+        width: 90%;
+        height: 100%;
+    }
+    
+    .secao2 {
+        display: block;
+        height: auto;
+        margin: 2em 1em;
+        border-radius: 15px;
+    }
+
+    .inputs {
+        display: block;
+        width: 95vw;
+        max-width: 95vw;
+        margin-top: 0.5em;
+    }
+
+    form {
+        width: 99%;
+        margin: 1em 0;
+        height: ;
+    }
+
+    div .input-texto .area-texto {
+        width: 95%;
+        height: 50vh;
+    }
+
+    div .input-texto .area-texto:focus {
+        height: 50vh;
+    }
+
+    div .input-texto .area-texto:focus ~ label,
+    div .input-texto .area-texto:valid ~ label {
+        font-size: 0;
+    }
+
+    .inputs p {
+        font-size: 1.2em;
+        display: flex;
+        align-items: center;
+    }
+
+    .botoes-interacao {
+        display: block;
+        height: 100%;
+    }
+
+    .botao-crip, .botao-descrip {
+        display: block;
+        padding: 0;
+        width: 90vw;
+        height: 8vh;
+        margin-top: 1%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 1%;
+        font-size: 1.5em;
+    }
+
+    .botao-descrip {
+        margin-top: 5%;
+        background: #FFFFFF;
+    }
+
+    .sem-mensagem {
+        height: 100%;
+        margin-top: 10%;
+        padding: 20px;
+    }
+
+    .texto-inicial-resultado {
+        margin: 0;
+    }
+
+    .sem-mensagem img {
+        display: none;
+    }
+
+    .area-resultado {
+        height: 50vh;
+    }
+
+    .botao-copiar {
+        background: #FFFFFF;
+    }
+
+    footer div {
+        background: none;
+        margin-top: 1em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media  screen and (max-height: 799px) {
+    div .input-texto .area-texto {
+        width: 95%;
+        height: 45vh;
+    }
+
+    div .input-texto .area-texto:focus {
+        height: 45vh;
+    }
+
+    .botao-descrip {
+        margin-top: 2%;
+        background: #FFFFFF;
+    }
+
 }
