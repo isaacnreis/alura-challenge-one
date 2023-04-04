@@ -6,13 +6,55 @@ var msg_result = document.querySelector(".esconder2");
 var area = document.getElementById("area");
 var resultado = document.getElementById("area-result");
 
+area.addEventListener("paste", function() {
+
+    const aceitos = new RegExp("^[0-9a-z\b]+$");
+    const proprio = this;
+
+    setTimeout(function() {
+
+        const texto = proprio.value;
+
+        if(!aceitos.test(texto)) {
+            proprio.value = proprio.value.replace(/[A-Z]/g, '');
+            proprio.value = proprio.value.replace(/[àèìòùáéíóúâêîôûãõç]/g, '');
+            proprio.value = proprio.value.replace(/[ÀÈÌÒÙÁÉÍÓÚÂÊÎÔÛÃÕÇ]/g, '');
+            proprio.value = proprio.value.replace(/[!@#$%¨&*()_-]/g, '');
+            proprio.value = proprio.value.replace(/[§´=+'"`^~?/\°º{}><]/g, '');
+        }
+
+    }, 10)
+
+});
+
+area.addEventListener("keypress", function(evento) {
+
+    if(!checarDigitacao(evento)) {
+        evento.preventDefault();
+    }
+
+});
+
+function checarDigitacao(evento) {
+
+    const digitacao = String.fromCharCode(evento.keyCode);
+
+    const aceitos = '[a-z 0-9]';
+
+    if(digitacao.match(aceitos)) {
+        console.log(digitacao);
+        return true;
+    }
+
+}
+
 function objetoVazio(){
     if(area.value == ""){
         return true;
     } else {
         return false;
     }
-}  
+}
 
 function checar(){
     if(objetoVazio()){

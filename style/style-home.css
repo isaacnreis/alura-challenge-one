@@ -94,6 +94,7 @@ div .input-texto .area-texto:valid ~ label {
 
 .inputs p {
     margin-left: 0;
+    font-size: 16px;
 }
 
 /*Estilizando botões*/
@@ -270,7 +271,6 @@ footer div {
     form {
         width: 99%;
         margin: 1em 0;
-        height: ;
     }
 
     div .input-texto .area-texto {
