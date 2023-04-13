@@ -16,7 +16,9 @@ area.addEventListener("paste", function() {
         const texto = proprio.value;
 
         if(!aceitos.test(texto)) {
+            alert("Apenas letras minúsculas e sem acento.")
             proprio.value = proprio.value.replace(/[A-Z]/g, '');
+            proprio.value = proprio.value.replace(/[0-9]/g, '');
             proprio.value = proprio.value.replace(/[àèìòùáéíóúâêîôûãõç]/g, '');
             proprio.value = proprio.value.replace(/[ÀÈÌÒÙÁÉÍÓÚÂÊÎÔÛÃÕÇ]/g, '');
             proprio.value = proprio.value.replace(/[!@#$%¨&*()_-]/g, '');
@@ -30,6 +32,7 @@ area.addEventListener("paste", function() {
 area.addEventListener("keypress", function(evento) {
 
     if(!checarDigitacao(evento)) {
+        alert("Apenas letras minúsculas e sem acento.")
         evento.preventDefault();
     }
 
@@ -39,7 +42,7 @@ function checarDigitacao(evento) {
 
     const digitacao = String.fromCharCode(evento.keyCode);
 
-    const aceitos = '[a-z 0-9]';
+    const aceitos = '[a-z]';
 
     if(digitacao.match(aceitos)) {
         console.log(digitacao);
